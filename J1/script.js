@@ -54,3 +54,36 @@ header2.addEventListener("dblclick", function() {
 });
 
 // exo 6
+let cards = document.getElementsByClassName("card");
+let btn2card = document.querySelector(".btn.btn-sm.btn-success");
+let img = document.querySelector(".card-img-top");
+let cardsStatus = true;
+
+btn2card.addEventListener("mouseover", function() {
+  if (cardsStatus === true) {
+    img.style.width = "20%";
+    cardsStatus = false;
+  } else {
+    img.style.width = "100%";
+    cardsStatus = true;
+  }
+});
+
+Array.from(cards).forEach(function(card) {
+  let btncards = card.querySelector(".btn-success");
+  let cardsText = card.querySelector(".card-text");
+  let cardsImg = card.querySelector(".card-img-top");
+  let cardStatus = true; // Changed variable name to avoid conflict
+
+  btncards.addEventListener("mouseover", function() {
+    if (cardStatus === true) {
+      cardsText.classList.toggle("collapse");
+      cardsImg.style.width = "20%";
+      cardStatus = false;
+    } else {
+      cardsText.classList.toggle("collapse");
+      cardsImg.style.width = "100%";
+      cardStatus = true;
+    }
+  });
+});
