@@ -1,3 +1,5 @@
+// exo 1
+
 let foot = document.getElementsByTagName("footer")[0];
 let count = 0
 foot.addEventListener("click", function(){
@@ -6,6 +8,7 @@ foot.addEventListener("click", function(){
   console.log(count);
 });
 
+// exo 2
 let header = document.getElementById("navbarHeader")
 let toggleButton = document.querySelector('button.navbar-toggler');
 
@@ -15,7 +18,7 @@ let toggleButton = document.querySelector('button.navbar-toggler');
   });
 
 
-
+// exo 3
 
 let card1 = document.querySelectorAll("div.card")[0];
 let cardtext = card1.querySelectorAll("p.card-text")[0];
@@ -25,6 +28,7 @@ btncard.addEventListener("click", function(){
   cardtext.style = "color: red"
 } );
 
+// exo 4
 let card2 = document.querySelectorAll("div.card")[1];
 let cardtext2 = card2.querySelectorAll("p.card-text")[0];
 let btncard2 = card2.querySelectorAll("button.btn-outline-secondary")[0]
@@ -36,3 +40,17 @@ btncard2.addEventListener("click", function(){
     { cardtext2.style = "color:black"; textStatus = false}
   });
 
+// exo 5
+let header2 = document.getElementsByTagName("header")[0];
+let cdn = document.getElementsByTagName("link")[0];
+console.log(cdn);
+
+header2.addEventListener("dblclick", function() {
+  if (cdn.disabled === false) {
+    cdn.disabled = true;
+  } else {
+    cdn.disabled = false;
+  }
+});
+
+// exo 6
